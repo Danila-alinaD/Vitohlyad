@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#myBtnContainer {
+	
+}
+
+.responsive-image {
+    max-width: 90%;
+    height: auto;
+    display: block; 
+    margin: auto; 
+    }
+	
+	.spoiler-content {
+    display: none;
+}
+
+.spoiler-button {
+    background-color: #080808;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.container2 {
+    text-align: left;
+	max-width: 600px;
+	color: white;
+    margin-left:  300px;
+	z-index: 2000;
+	
+}
+
+.custom-link-sys {
+    color: #20B2AA; /* Колір посилання (червоний) */
+    text-decoration: none; /* Забирає підкреслення, яке за замовчуванням є у браузерах */
+	font-size: 18px; /* Початковий розмір тексту */
+    transition: color 0.2s ease; 
+}
+
+.custom-link-sys:hover {
+   color: #ffffff; 
+}
+
+.custom-link {
+    color: #00FA9A; /* Колір посилання (червоний) */
+    text-decoration: none; /* Забирає підкреслення, яке за замовчуванням є у браузерах */
+	font-size: 16px; /* Початковий розмір тексту */
+    transition: font-size 0.5s ease, color 0.5s ease;; 
+	
+}
+
+.custom-link:hover {
+    font-size: 18px; /* Розмір тексту при наведенні курсору (збільшення) */
+	color: #ffffff;
+}
+
+body {
+    font-family: 'Philosopher', sans-serif;
+	 background: linear-gradient(to bottom, black 75%, #002266 100%);
+   background-attachment: fixed;
+}
+
+.block {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 10px;
+		}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+   flex: 1;
+    display: flex;
+    flex-direction: column;
+ 
+ 
+}
+section .air{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("images/wave.png");
+  background-size: 1000px 100px
+  
+}
+section .air.air1{
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .air.air2{
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .air.air3{
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .air.air4{
+  animation: wave2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: -1000px; 
+  }
+}
+
+header {
+    background: linear-gradient(to right, #000000, #080808, #000000);
+    color: #fff;
+    padding: 20px 0; /* Змінили горизонтальний padding на вертикальний для центрування */
+    display: flex;
+    justify-content: center; /* Центруємо розділи по горизонталі */
+    align-items: center;
+	font-size: 22px;
+	z-index: 25000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 0px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Стилі для підрозділів */
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: 	#101010;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0; /* Початкова прозорість 0 */
+    visibility: hidden; /* Початкова видимість hidden */
+    transform: translateY(-10px); /* Початковий зсув вгору */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Плавний перехід для transform та opacity */
+}
+
+nav ul li:hover ul {
+    display: block;
+    opacity: 1; /* Змінюємо прозорість на 1 при наведенні */
+    visibility: visible; /* Змінюємо видимість на visible */
+    transform: translateY(0); /* Змінюємо transform для відображення в потрібному місці */
+}
+
+nav ul ul li {
+    width: 200px;
+    padding: 10px;
+    opacity: 0; /* Початкова прозорість підрозділів 0 */
+    transform: translateY(10px); /* Початковий зсув вниз */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавний перехід для opacity та transform */
+}
+
+nav ul li:hover ul li {
+    opacity: 1; /* Змінюємо прозорість на 1 при наведенні */
+    transform: translateY(0); /* Змінюємо transform для відображення в потрібному місці */
+    transition-delay: 0.1s; /* Додавана затримка для послідовного з'явлення підрозділів */
+}
+.menu li ul {
+    display: none;
+    opacity: 0;
+}
+
+/* Анімація для з'явлення підрозділів */
+.menu li:hover ul {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 600px;
+	color: white;
+    margin:  auto;
+	z-index: 2000;
+}
+
+.section {
+	
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin: 20px;
+	  background-attachment: fixed;
+    background-size: cover;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+.section p {
+    margin-bottom: 15px;
+	font-size: 16px;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стилізація основного меню */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+     /* Колір фону меню */
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff; /* Колір тексту розділу */
+    padding: 10px 20px;
+    display: block;
+}
+.footer {
+    padding: 80px 0;
+    text-align: center;
+}
+/* Біле обведення для розділів меню */
+.menu li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white; /* Товщина та колір білого обведення */
+    box-sizing: border-box;
+    opacity: 0; /* З початку обведення приховане */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Показувати обведення при наведенні курсору */
+.menu li a:hover::before {
+    opacity: 1;
+}
+/* Медіа-запит для мобільних телефонів */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul ul li {
+        width: 100%;
+    }
+	
+	.responsive-image {
+    max-width: 80%;
+    height: auto;
+    display: block; 
+    margin: auto; 
+    }
+	
+	.container2 {
+    text-align: left;
+	max-width: 600px;
+	color: white;
+    margin:  20px;
+	z-index: 2000;
+	
+}
+}
