@@ -32,6 +32,17 @@
 	
 }
 
+.section.news {
+    background-color: rgba(0, 0, 0, 0.5); /* Встановлюємо білий фон */
+    border-radius: 5px; /* Встановлюємо закруглені кути */
+    padding: 8px; /* Встановлюємо відступи в середині квадратика */
+}
+
+
+
+
+
+
 .custom-link-sys {
     color: #20B2AA; /* Колір посилання (червоний) */
     text-decoration: none; /* Забирає підкреслення, яке за замовчуванням є у браузерах */
@@ -58,6 +69,15 @@
 
 .spoiler-button {
     background-color: #080808;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.spoiler-button-m {
+    background-color: #000000;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -299,13 +319,42 @@ nav ul li:hover ul li {
 .menu li a:hover::before {
     opacity: 1;
 }
+
+
+
+    /* Відображаємо хедер для мобільних пристроїв на мобільних пристроях */
+    .mobile-header {
+        display: none;
+    }
+	
+	.dws-menu {
+    text-align: left; /* Вирівнювання контейнера вліво */
+}
+
+.spoiler-button-m {
+    display: block; /* Відображати кнопки у блочному режимі */
+    margin-left: 30px; /* Відступ зліва (можете налаштувати відповідно) */
+    margin-bottom: 10px; /* Відступ знизу між кнопками */
+    font-family: 'Philosopher', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    text-align: left; /* Вирівнювати текст у кнопках вліво */
+    cursor: pointer;
+}
+.spoiler-content.mob {
+   
+    margin-left: 30px; /* Відступ зліва (можете налаштувати відповідно) */
+    margin-bottom: 10px; /* Відступ знизу між кнопками */
+   
+}
 /* Медіа-запит для мобільних телефонів */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
     }
-
+	
     nav ul {
         flex-direction: column;
     }
@@ -319,10 +368,20 @@ nav ul li:hover ul li {
         width: 100%;
     }
 	
+
 	.responsive-image {
     max-width: 80%;
     height: auto;
     display: block; 
     margin: auto; 
+    }
+	
+	.desktop-header {
+        display: none;
+    }
+
+    /* Відображаємо хедер для мобільних пристроїв на мобільних пристроях */
+    .mobile-header {
+        display: block;
     }
 }
