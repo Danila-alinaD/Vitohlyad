@@ -31,6 +31,9 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+.spoiler-content-c {
+    display: none;
+}
 
 .container2 {
     text-align: left;
