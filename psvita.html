@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css" href="style2.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 	<link rel="shortcut icon" href="icon.png" type="image/png">
     <title>Вітогляд</title>
 </head>
 <body>
 <div class="wrapper">
-	<div class="block">
+	<div class="block desktop-only">
 	<img align="center" height="50%" src="logo.png">
 	</div>
     <header class="desktop-header">
@@ -60,66 +61,111 @@
     </header>
 	
 	<header class="mobile-header">
-	<div class="dws-menu">
-		<button align="center" class="spoiler-button-m">ГОЛОВНА</button>
-        <div  class="spoiler-content mob">
-		<a class="custom-link-sys" href="index.html">Головна</a><br><br>
-		<a class="custom-link-sys" href="catalog.html">Каталог</a><br><br>
-		<a class="custom-link-sys" href="links.html">Посилання</a><br><br>
-		<a class="custom-link-sys" href="news.html">Новини</a><br><br>			
-        </div>
-		
-		<button class="spoiler-button-m">PS VITA</button>
-        <div  class="spoiler-content mob">
-		<a class="custom-link-sys" href="psvita.html">PS Vita</a><br><br>
-		<a class="custom-link-sys" href="localpsv.html">Локалізація</a><br><br>
-		<a class="custom-link-sys" href="catalog.html">Українізатори ігор</a><br><br>
-		<a class="custom-link-sys" href="usefulpsv.html">Корисне</a><br><br>		
-        </div>
-		
-		<button class="spoiler-button-m">PS3</button>
-        <div  class="spoiler-content mob">
-		<a class="custom-link-sys" href="ps3.html">PS3</a><br><br>
-		<a class="custom-link-sys" href="localps3.html">Локалізація</a><br><br>
-		<a class="custom-link-sys" href="catalog.html">Українізатори ігор</a><br><br>
-		<a class="custom-link-sys" href="usefulps3.html">Корисне</a><br><br>		
-        </div>
-		
-		<button class="spoiler-button-m">PSP</button>
-        <div  class="spoiler-content mob">
-		<a class="custom-link-sys" href="psp.html">PSP</a><br><br>
-		<a class="custom-link-sys" href="localpsp.html">Локалізація</a><br><br>
-		<a class="custom-link-sys" href="catalog.html">Українізатори ігор</a><br><br>
-		<a class="custom-link-sys" href="usefulpsp.html">Корисне</a><br><br>			
-        </div>
-		
-		<button class="spoiler-button-m">ІНШІ ПРОЄКТИ</button>
-        <div  class="spoiler-content mob">
-		<a class="custom-link-sys" href="https://danila-alinad.github.io/Fallout2ua/index.html">Fallout2ua</a><br><br>
-		<a class="custom-link-sys" href="https://play.google.com/store/apps/dev?id=9009964096656744216&hl=uk">Just Another Games</a><br><br>
-		<a class="custom-link-sys" href="https://linktr.ee/danil_linad">Усі проєкти</a><br><br>		
-        </div>
-		
-		<a custom-link-sys href="support.html">
-		<button class="spoiler-button-m" href="support.html" >ПІДТРИМАТИ</button>
-		</a>
-        <div  class="spoiler-content">
-					
-        </div>
-		
-		<script src="mobile.js"></script>
+		<div class="mobile-header-top">
+			<button class="burger-menu-btn" id="burgerBtn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<div class="mobile-logo">
+				<img src="logo.png" alt="Вітогляд" class="mobile-logo-img">
+			</div>
 		</div>
+	</header>
+	<div class="mobile-overlay" id="mobileOverlay"></div>
+	<nav class="mobile-nav" id="mobileNav">
+		<div class="menu-level menu-level-1" data-level="1">
+			<ul class="mobile-menu">
+				<li>
+					<button class="mobile-menu-link menu-item-with-sub" data-sublevel="2" data-title="ГОЛОВНА">
+						ГОЛОВНА
+					</button>
+				</li>
+				<li>
+					<button class="mobile-menu-link menu-item-with-sub" data-sublevel="3" data-title="PS VITA">
+						PS VITA
+					</button>
+				</li>
+				<li>
+					<button class="mobile-menu-link menu-item-with-sub" data-sublevel="4" data-title="PS3">
+						PS3
+					</button>
+				</li>
+				<li>
+					<button class="mobile-menu-link menu-item-with-sub" data-sublevel="5" data-title="PSP">
+						PSP
+					</button>
+				</li>
+				<li>
+					<button class="mobile-menu-link menu-item-with-sub" data-sublevel="6" data-title="ІНШІ ПРОЄКТИ">
+						ІНШІ ПРОЄКТИ
+					</button>
+				</li>
+				<li><a href="support.html" class="mobile-menu-link support-link">ПІДТРИМАТИ</a></li>
+			</ul>
+		</div>
+		<div class="menu-level menu-level-2" data-level="2">
+			<button class="back-btn">← Назад</button>
+			<h3 class="menu-level-title">ГОЛОВНА</h3>
+			<ul class="mobile-menu">
+				<li><a href="index.html" class="mobile-menu-link">Головна</a></li>
+				<li><a href="catalog.html" class="mobile-menu-link">Каталог</a></li>
+				<li><a href="links.html" class="mobile-menu-link">Посилання</a></li>
+				<li><a href="news.html" class="mobile-menu-link">Новини</a></li>
+			</ul>
+		</div>
+		<div class="menu-level menu-level-3" data-level="3">
+			<button class="back-btn">← Назад</button>
+			<h3 class="menu-level-title">PS VITA</h3>
+			<ul class="mobile-menu">
+				<li><a href="psvita.html" class="mobile-menu-link">PS Vita</a></li>
+				<li><a href="localpsv.html" class="mobile-menu-link">Локалізація</a></li>
+				<li><a href="catalog.html" class="mobile-menu-link">Українізатори ігор</a></li>
+				<li><a href="usefulpsv.html" class="mobile-menu-link">Корисне</a></li>
+			</ul>
+		</div>
+		<div class="menu-level menu-level-4" data-level="4">
+			<button class="back-btn">← Назад</button>
+			<h3 class="menu-level-title">PS3</h3>
+			<ul class="mobile-menu">
+				<li><a href="ps3.html" class="mobile-menu-link">PS3</a></li>
+				<li><a href="localps3.html" class="mobile-menu-link">Локалізація</a></li>
+				<li><a href="catalog.html" class="mobile-menu-link">Українізатори ігор</a></li>
+				<li><a href="usefulps3.html" class="mobile-menu-link">Корисне</a></li>
+			</ul>
+		</div>
+		<div class="menu-level menu-level-5" data-level="5">
+			<button class="back-btn">← Назад</button>
+			<h3 class="menu-level-title">PSP</h3>
+			<ul class="mobile-menu">
+				<li><a href="psp.html" class="mobile-menu-link">PSP</a></li>
+				<li><a href="localpsp.html" class="mobile-menu-link">Локалізація</a></li>
+				<li><a href="catalog.html" class="mobile-menu-link">Українізатори ігор</a></li>
+				<li><a href="usefulpsp.html" class="mobile-menu-link">Корисне</a></li>
+			</ul>
+		</div>
+		<div class="menu-level menu-level-6" data-level="6">
+			<button class="back-btn">← Назад</button>
+			<h3 class="menu-level-title">ІНШІ ПРОЄКТИ</h3>
+			<ul class="mobile-menu">
+				<li><a href="https://danila-alinad.github.io/Fallout2ua/index.html" target="_blank" class="mobile-menu-link">Fallout 2 UA</a></li>
+				<li><a href="https://play.google.com/store/apps/dev?id=9009964096656744216&hl=uk" target="_blank" class="mobile-menu-link">Just Another Games</a></li>
+				<li><a href="https://linktr.ee/danil_linad" target="_blank" class="mobile-menu-link">Усі проєкти</a></li>
+			</ul>
+		</div>
+	</nav>
+	<script src="mobile.js"></script>
 	</header>
 	<br>
  <div class="container">
-        <div class="section hidden">
+        <div class="section">
             <h2 align="center">PlayStation Vita</h2>
             <img class="responsive-image" align="center" height="5%" src="images/PSVita.png">
         </div>
 	
 	
 	
-	<div class="section hidden">
+	<div class="section">
         <br>
             <p>PlayStation Vita — це портативна гральна консоль, розроблена Sony, яка була випущена в 2011 році. Вона вражає своєю якістю графіки та широким спектром ігрового контенту, включаючи ексклюзиви та інтернет-функції для мережевого геймінгу. 
 			PlayStation Vita все ще цінується серед геймерів і надає можливість насолоджуватися іграми в будь-якому місці та часі.</p>
@@ -140,20 +186,11 @@
         </div>
     </div>
 	
-    <script src="script.js"></script>
-	
-  
- <footer class="footer">
-        <br>
-	<section>
+    <script src="script.js"></script></div>
   <div class='air air1'></div>
   <div class='air air2'></div>
   <div class='air air3'></div>
   <div class='air air4'></div>
-</section>
-    </footer>
-	
-	</div>
 	
 </body>
 
